@@ -1,0 +1,494 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 1em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee7e7;
+}
+
+h1 {
+  color: #ffffff;
+  background-attachment: fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.966), rgba(46, 46, 46, 0.856)), url('https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg') center/cover; /* Agrega un degradado rojo semi-transparente sobre la imagen */
+  padding: 70px; /* Ajusta el espacio interno según sea necesario */
+  position: relative;
+  bottom: 66px;
+  right:45px;
+  width: 1219px;
+  height: 556px;
+   /* Puedes ajustar este valor según lo grueso que desees el texto */
+  }
+.Titulo{
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden; /* Oculta el contenido que se desborda del contenedor */
+  position: relative;
+  font-family: 'Segoe Script', cursive;
+  font-weight: 900;
+  top: 170px;
+  }
+
+  #scrollButton {
+    position: relative;
+    bottom: 415px;
+    cursor: pointer;
+    font-size: 85px;
+  }
+  
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    position: relative;
+  }
+  
+  .arrow-down:before {
+    content: '';
+    width: 40px;
+    height: 10px;
+    position: absolute;
+    top: 15px;
+    left: -20px;
+  }
+@keyframes scrollText {
+  0% {
+    left: 100%; /* Inicia el texto fuera del contenedor hacia la derecha */
+  }
+  100% {
+    left: -100%; /* Mueve el texto completamente fuera del contenedor hacia la izquierda */
+  }
+}
+
+.menu {
+  display: flex;
+  position: relative;
+  bottom: 185px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  max-width: 300px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: filter 0.3s, opacity 0.3s;
+  justify-content: space-between;
+
+}
+
+
+.menu-item h2 {
+  margin-bottom: 10px;
+  color: #333;
+  letter-spacing: -1px; /* Ajusta este valor según tu preferencia */
+}
+
+.menu-item p {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1; /* Ajusta este valor según tu preferencia */
+  letter-spacing: -1px; /* Ajusta este valor según tu preferencia */
+
+}
+
+.menu-item button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.menu-item button:focus {
+  /* Establece los estilos específicos cuando el botón está enfocado (hace clic) */
+  outline: none; /* Asegura que no haya contorno de enfoque */
+  border: none; /* Quita cualquier borde en el estado enfocado */
+  box-shadow: none; /* Quita cualquier sombra en el estado enfocado */
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: row; /* Cambiado de column a row */
+  background-color: #fff;
+  padding: 14px; /* Aumentado el espacio interno del modal-content */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: 540px;
+  width: 770px; /* Ancho máximo del modal-content */
+  margin: auto; /* Centra el modal-content horizontalmente */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos del formulario */
+  width: 100%; /* Ancho del formulario al 100% del modal-content */
+}
+
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.label-input label {
+  margin-bottom: 5px; /* Reducido el espacio después del label */
+  color: #333;
+  position: relative;
+  text-align: center; /* Centra el texto del label */
+}
+
+.label-input input {
+  padding: 8px; /* Reducido el espacio interno del input */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px; /* Espacio entre los inputs y el botón */
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  position: relative;
+  top: 10px;
+  border: none;
+  padding: 10px; /* Aumentado el espacio interno del botón */
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Añade estos estilos al archivo CSS de tu componente */
+
+.react-calendar {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  position: relative;
+  top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 10px;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.react-calendar__navigation__label,
+.react-calendar__navigation__arrow {
+  cursor: pointer;
+}
+
+.react-calendar__month-view__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.react-calendar__month-view__days__day {
+  padding: 6px;
+  text-align: center;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.react-calendar__tile--active {
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.react-calendar__tile--now {
+  background-color: #f4f4f4;
+  border-radius: 50%;
+}
+
+.react-calendar__tile--hasActive {
+  background-color: #e0e0e0;
+}
+
+.react-calendar__tile--rangeStart,
+.react-calendar__tile--rangeEnd {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.react-calendar__tile--rangeStart::before,
+.react-calendar__tile--rangeEnd::before {
+  border-bottom-color: #4caf50;
+}
+
+.react-calendar__tile--hover,
+.react-calendar__tile--hover:active,
+.react-calendar__tile--hover::before {
+  background-color: #e0e0e0;
+}
+
+.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd {
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover,
+.react-calendar--selectRange .react-calendar__tile--hover:active,
+.react-calendar--selectRange .react-calendar__tile--hover::before {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.react-calendar__tile--rangeStart.react-calendar__tile--hover,
+.react-calendar__tile--rangeEnd.react-calendar__tile--hover {
+  background-color: #4caf50;
+  color: #fff;
+}
+.menu-item-image {
+  width: 100%;
+  height: 200px; /* Ajusta la altura según tus necesidades */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: filter 0.3s ease;
+}
+
+.menu-item:hover .menu-item-image {
+  filter: brightness(70%); /* Ajusta el efecto de oscurecimiento al pasar el mouse */
+}
+
+
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  width: 367px;
+  width: 960px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  color: #333;
+  position: relative;
+  right: 63px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 8px;
+  position: relative;
+  right:10px;
+  top: 2px;
+  width: 523px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.ButtonReservas {
+  /* Estilos normales del botón */
+  background-color: #4caf50;
+  top: 3px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Agrega una transición de transformación */
+}
+
+.ButtonReservas:hover {
+  transform: scale(1.1); /* Aplica un aumento de escala al hacer hover */
+  animation: bounce 0.5s ease; /* Agrega una animación de rebote al hacer hover */
+}
+
+
+.date{
+  position: relative;
+  top: 10px;
+  right: 390px;
+}
+.imagenReserva{
+  width: 383px;
+  height: 405px;
+  position: relative;
+  top: 65px;
+}
+.name{
+  position: relative;
+  bottom: 6px;
+  top: 3px;
+  right: 215px;
+}
+.email{
+  position: relative;
+  top: 3px;
+  right: 215px;
+}
+button[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  left: 10px;
+  bottom: 18px;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Añade estos estilos al archivo CSS de tu componente */
+
+.react-calendar {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Haz que el calendario ocupe el 100% del ancho disponible */
+  max-width: 300px; /* Establece un ancho máximo según tus necesidades */
+  height: 364px;
+  position: relative;
+  bottom: 25px;
+  margin: 0 auto; /* Centra horizontalmente */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+.react-calendar__navigation__label,
+.react-calendar__navigation__arrow {
+  cursor: pointer;
+}
+
+.react-calendar__month-view__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.react-calendar__month-view__days__day {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Agrega esta línea para quitar el subrayado */
+  box-sizing: border-box; /* Ajusta el modelo de caja para incluir el padding */
+  line-height: 1.2; /* Ajusta la altura de línea para asegurar espacio suficiente */
+}
+
+.react-calendar__month-view__days__day:hover {
+  background-color: #28702d;
+}
+
+.react-calendar__tile--active,
+.react-calendar__tile--rangeStart,
+.react-calendar__tile--rangeEnd,
+.react-calendar--selectRange .react-calendar__tile--hover,
+.react-calendar__tile--rangeStart.react-calendar__tile--hover,
+.react-calendar__tile--rangeEnd.react-calendar__tile--hover {
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.react-calendar__tile--now {
+  background-color: #f4f4f4;
+  border-radius: 50%;
+}
+
+.react-calendar__tile--hasActive {
+  background-color: #e0e0e0;
+}
+
+.react-calendar__tile--hover,
+.react-calendar__tile--hover:active,
+.react-calendar__tile--hover::before {
+  background-color: #e0e0e0;
+}
+
+.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd {
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover,
+.react-calendar--selectRange .react-calendar__tile--hover:active,
+.react-calendar--selectRange .react-calendar__tile--hover::before {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.react-calendar__tile--rangeStart.react-calendar__tile--hover,
+.react-calendar__tile--rangeEnd.react-calendar__tile--hover {
+  background-color: #4caf50;
+  color: #fff;
+}
